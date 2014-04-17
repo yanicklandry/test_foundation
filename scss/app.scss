@@ -45,39 +45,31 @@
 
 $slider_height: 350px;
 
-.slider-container {
-  position: relative;
-  // overflow: hidden;
-  height: $slider_height;
-  .slide {
+.slider {
+  margin:0px;
+  li {
     display:block;
-    figure {
-      margin:0px;
-      background:#cccccc;
+  }
+}
+
+@media #{$medium-up} {
+  .slider-container {
+    .slider {
+      max-height:$slider_height;
+      position:absolute;
+      overflow:hidden;
     }
-    img {
-      position: absolute;
-      left: 0px;
-      bottom: 0px;
-      max-height: $slider_height;
-    }
-    figcaption {
-      position:relative;
+  }
+
+  .caption-container {
+    height:$slider_height;
+    .slider, .helper {
+      position:absolute;
+      left:0px;
+      bottom:0px;
     }
     .columns {
       height:100%;
     }
-    .helper {
-      position:absolute;
-      bottom: 0px;
-      left: 0px;
-    }
-  }
-  ul, li, figure, figcaption {
-    height:100%;
-  }
-  .caption-positioned {
-    position:absolute;
-    bottom:0px;
   }
 }
