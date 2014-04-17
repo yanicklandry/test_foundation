@@ -38,3 +38,16 @@
 //   "foundation/components/type",
 //   "foundation/components/offcanvas",
 //   "foundation/components/visibility";
+
+.columns {
+  border:1px solid green;
+}
+
+.background {
+  position:absolute;
+  width:100%;
+}
+
+.background p {
+  text-align:center;
+}
