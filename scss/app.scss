@@ -43,11 +43,41 @@
   border:1px solid green;
 }
 
-.background {
-  position:absolute;
-  width:100%;
-}
+$slider_height: 350px;
 
-.background p {
-  text-align:center;
+.slider-container {
+  position: relative;
+  // overflow: hidden;
+  height: $slider_height;
+  .slide {
+    display:block;
+    figure {
+      margin:0px;
+      background:#cccccc;
+    }
+    img {
+      position: absolute;
+      left: 0px;
+      bottom: 0px;
+      max-height: $slider_height;
+    }
+    figcaption {
+      position:relative;
+    }
+    .columns {
+      height:100%;
+    }
+    .helper {
+      position:absolute;
+      bottom: 0px;
+      left: 0px;
+    }
+  }
+  ul, li, figure, figcaption {
+    height:100%;
+  }
+  .caption-positioned {
+    position:absolute;
+    bottom:0px;
+  }
 }
